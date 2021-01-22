@@ -43,12 +43,9 @@ const ManageTeam = () => {
         </p>
       </motion.div>
 
-      <LazyImage
-        variants={imageVariant}
-        styling="manage-team-video"
-        src={TeamImage}
-        alt="team example"
-      />
+      <motion.div variants={imageVariant} className="manage-team-video">
+        <LazyImage src={TeamImage} alt="example" width="400" height="300" />
+      </motion.div>
     </motion.div>
   );
 };

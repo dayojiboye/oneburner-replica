@@ -43,12 +43,9 @@ const LeadMgt = () => {
         </p>
       </motion.div>
 
-      <LazyImage
-        variants={imageVariant}
-        styling="lead-mgt-image"
-        src={LeadMgtImg}
-        alt="example"
-      />
+      <motion.div variants={imageVariant} className="lead-mgt-image">
+        <LazyImage src={LeadMgtImg} alt="example" width="400" height="300" />
+      </motion.div>
     </motion.div>
   );
 };

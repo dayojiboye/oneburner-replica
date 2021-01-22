@@ -35,12 +35,14 @@ const CustomerSupport = () => {
       initial="hidden"
       className="customer-support"
     >
-      <LazyImage
-        variants={imageVariant}
-        styling="customer-support-image"
-        src={customerSupportImg}
-        alt="example"
-      />
+      <motion.div variants={imageVariant} className="customer-support-image">
+        <LazyImage
+          src={customerSupportImg}
+          alt="example"
+          width="400"
+          height="270"
+        />
+      </motion.div>
 
       <motion.div variants={textVariant} className="customer-support-text">
         <h2>24/7 customer support</h2>

@@ -38,12 +38,14 @@ const Intro = () => {
           </motion.a>
         </motion.div>
 
-        <LazyImage
-          variants={introBgVariants}
-          styling="intro-background"
-          src={LandingImage}
-          alt="landing"
-        />
+        <motion.div variants={introBgVariants} className="intro-bg">
+          <LazyImage
+            src={LandingImage}
+            alt="landing"
+            width="400"
+            height="350"
+          />
+        </motion.div>
       </motion.div>
     </div>
   );

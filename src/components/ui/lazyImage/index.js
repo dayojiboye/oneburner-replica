@@ -1,22 +1,38 @@
 import React from 'react';
 
-import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const LazyImage = ({ variants, styling, src, alt, ...props }) => {
+const LazyImage = ({ width, height, src, alt, ...props }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
 
   return (
-    <motion.div
+    <div
       ref={ref}
       data-inview={inView}
-      variants={variants}
-      className={styling}
+      style={{
+        paddingBottom: `${(height / width) * 100}%`,
+        position: 'relative',
+      }}
     >
-      {inView ? <img src={src} alt={alt} {...props} /> : null}
-    </motion.div>
+      {inView ? (
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          loading="lazy"
+          {...props}
+          style={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain',
+          }}
+        />
+      ) : null}
+    </div>
   );
 };
 

@@ -40,12 +40,9 @@ const TaskTimeline = () => {
         <p>View dates, projects, calendar, sprint and more with reliability.</p>
       </motion.div>
 
-      <LazyImage
-        variants={imageVariant}
-        styling="task-timeline-image"
-        src={TaskTimelineImg}
-        alt="example"
-      />
+      <motion.div variants={imageVariant} className="task-timeline-image">
+        <LazyImage src={TaskTimelineImg} alt="example" width="400" height="300" />
+      </motion.div>
     </motion.div>
   );
 };

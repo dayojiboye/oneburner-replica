@@ -35,12 +35,9 @@ const TeamSpeed = () => {
       initial="hidden"
       className="team-speed"
     >
-      <LazyImage
-        variants={imageVariant}
-        styling="team-speed-image"
-        src={TeamImage}
-        alt="example"
-      />
+       <motion.div variants={imageVariant} className="team-speed-image">
+        <LazyImage src={TeamImage} alt="example" width="400" height="300" />
+      </motion.div>
 
       <motion.div variants={textVariant} className="team-speed-text">
         <h2>Bring your team up to speed</h2>

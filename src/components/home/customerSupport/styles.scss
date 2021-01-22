@@ -13,13 +13,9 @@
   }
 
   .customer-support-image {
-    width: 55%;
     padding-right: 7rem;
-
-    > img {
-      width: 100%;
-      object-fit: cover;
-    }
+    width: 100%;
+    max-width: 600px;
   }
 }
 

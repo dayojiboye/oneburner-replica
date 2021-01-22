@@ -17,13 +17,9 @@
   }
 
   .manage-team-video {
-    width: 55%;
     padding-left: 7rem;
-
-    > img {
-      width: 100%;
-      object-fit: cover;
-    }
+    width: 100%;
+    max-width: 600px;
   }
 }
 

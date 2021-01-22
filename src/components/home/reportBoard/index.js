@@ -35,12 +35,9 @@ const ReportBoard = () => {
       initial="hidden"
       className="report-board"
     >
-      <LazyImage
-        variants={imageVariant}
-        styling="report-board-image"
-        src={ReportBoardImg}
-        alt="example"
-      />
+     <motion.div variants={imageVariant} className="report-board-image">
+        <LazyImage src={ReportBoardImg} alt="example" width="400" height="300" />
+      </motion.div>
 
       <motion.div variants={textVariant} className="report-board-text">
         <h2>Timeless report generator</h2>
