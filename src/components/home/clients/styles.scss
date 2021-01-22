@@ -1,0 +1,48 @@
+.clients-home {
+  width: 80%;
+  margin: 1.5rem auto;
+  text-align: center;
+
+  > p {
+    margin: 3rem 0 4rem;
+    line-height: 1.5;
+  }
+
+  .companies {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+      width: 100.67px;
+      height: 67px;
+      margin-bottom: 1rem;
+      padding: 0;
+
+      &:nth-child(2) {
+        width: 120px;
+      }
+
+      &:nth-child(n + 4) {
+        width: 68px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 933px) {
+  .clients-home {
+    width: 90%;
+
+    .companies {
+      justify-content: center !important;
+
+      svg {
+        margin-right: 1rem !important;
+      }
+    }
+  }
+}

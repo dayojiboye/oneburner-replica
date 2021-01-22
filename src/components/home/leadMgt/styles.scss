@@ -1,0 +1,45 @@
+.lead-mgt {
+  width: 80%;
+  margin: 5rem auto;
+  display: flex;
+  align-items: center;
+
+  .lead-mgt-text {
+    flex: 1;
+
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  .lead-mgt-image {
+    width: 55%;
+    padding-left: 7rem;
+
+    > img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 933px) {
+  .lead-mgt {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem auto;
+
+    .lead-mgt-text {
+      width: 100%;
+      text-align: center;
+    }
+
+    .lead-mgt-image {
+      width: 600px;
+      max-width: 90%;
+      margin: 1rem auto;
+      padding: 0;
+    }
+  }
+}

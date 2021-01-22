@@ -1,0 +1,43 @@
+.fav-tools {
+  width: 80%;
+  margin: 5rem auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  .tools-images-container {
+    width: 100%;
+    margin-top: 3rem;
+
+    .first-layer-icons,
+    .second-layer-icons {
+      width: 100%;
+      display: flex;
+      // flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      svg {
+        width: 100%;
+        margin-right: 0.5rem;
+        height: 30px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .second-layer-icons {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media (max-width: 933px) {
+  .fav-tools {
+    width: 90%;
+    margin: 2rem auto;
+  }
+}

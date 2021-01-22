@@ -1,0 +1,51 @@
+.home-outro {
+  width: 100%;
+  background: #7837f8;
+  padding: 5rem 1rem;
+  text-align: center;
+  color: white;
+
+  h3 {
+    font-size: 1.7rem;
+    margin: 0;
+  }
+
+  p {
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+  }
+
+  .home-outro-btn {
+    width: 200px;
+    background: #462686;
+    margin: auto;
+    padding: 0.8rem 0;
+    border: 1px solid #462686;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-family: inherit;
+    outline: none;
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    top: 0;
+    transition: background 0.4s ease-in-out, border 0.4s ease-in-out,
+      top 0.4s linear;
+
+    &:hover {
+      background: #2d1857;
+      border: 1px solid #2d1857;
+      top: -10px;
+    }
+
+    svg {
+      width: 7px;
+      height: 10px;
+      margin-left: 10px;
+    }
+  }
+}

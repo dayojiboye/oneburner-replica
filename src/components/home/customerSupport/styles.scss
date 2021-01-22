@@ -1,0 +1,46 @@
+.customer-support {
+  width: 80%;
+  margin: 5rem auto;
+  display: flex;
+  align-items: center;
+
+  .customer-support-text {
+    flex: 1;
+
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  .customer-support-image {
+    width: 55%;
+    padding-right: 7rem;
+
+    > img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 933px) {
+  .customer-support {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem auto;
+
+    .customer-support-text {
+      width: 100%;
+      text-align: center;
+    }
+
+    .customer-support-image {
+      width: 600px;
+      max-width: 90%;
+      margin: 1rem auto;
+      padding: 0;
+      order: 2;
+    }
+  }
+}

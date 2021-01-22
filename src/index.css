@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import '../node_modules/hamburgers/dist/hamburgers.css';
+
+*,
+:before,
+:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: Sofia Pro Regular;
+  src: url('./assets/fonts/Sofia Pro Light Az.otf');
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family: Sofia Pro Regular;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+}
+
+html.fixed,
+body.fixed {
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+#root {
+  position: relative;
+  overflow: auto;
+}
+
+.hamburger-box {
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #462686;
+  width: 30px;
+  height: 2px;
+  margin: 0;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #462686;
+  width: 30px;
+  height: 2px;
+  margin: 0;
+}
+
+.hamburger:hover {
+  opacity: 1 !important;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.3;
 }
