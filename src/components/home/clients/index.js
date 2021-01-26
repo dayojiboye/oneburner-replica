@@ -14,19 +14,19 @@ import './styles.scss';
 
 const clients = () => {
   return (
-    <div className="clients-home">
+    <section className="section_wrapper home_clients">
       <p>Over 500+ companies bond teams together with Oneburner</p>
 
-      <div className="companies">
-        <PaystackLogo />
-        <EgyptairLogo />
-        <DangoteLogo />
-        <StandardBankLogo />
-        <MtnLogo />
-        <GtbankLogo />
-        <SkooleeoLogo />
+      <div className="home_clients__companies">
+        <PaystackLogo style={{ height: '50px' }} />
+        <EgyptairLogo style={{ height: '45px' }} />
+        <DangoteLogo style={{ height: '90px' }} />
+        <StandardBankLogo style={{ height: '50px' }} />
+        <MtnLogo style={{ height: '50px' }} />
+        <GtbankLogo style={{ height: '70px' }} />
+        <SkooleeoLogo style={{ height: '50px' }} />
       </div>
-    </div>
+    </section>
   );
 };
 

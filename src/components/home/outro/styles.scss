@@ -1,45 +1,37 @@
-.home-outro {
-  width: 100%;
-  background: #7837f8;
+.home_outro {
+  width: var(--full);
+  background: var(--primary-color-lighter);
   padding: 5rem 1rem;
   text-align: center;
-  color: white;
+  color: var(--white);
 
   h3 {
     font-size: 1.7rem;
-    margin: 0;
   }
 
   p {
-    line-height: 1.5;
     margin-bottom: 2.5rem;
+    margin-top: 2rem;
   }
 
-  .home-outro-btn {
-    width: 200px;
-    background: #462686;
-    margin: auto;
-    padding: 0.8rem 0;
-    border: 1px solid #462686;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    font-family: inherit;
-    outline: none;
+  &__btn {
     display: block;
-    white-space: nowrap;
+    max-width: 230px;
+    background: var(--primary-color);
+    margin: 0 auto;
+    padding: 0.8rem 0;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--button-border-radius);
+    text-align: center;
+    font-weight: 600;
+    color: var(--white);
     position: relative;
     top: 0;
-    transition: background 0.4s ease-in-out, border 0.4s ease-in-out,
-      top 0.4s linear;
+    transition: all 0.2s linear;
 
     &:hover {
-      background: #2d1857;
-      border: 1px solid #2d1857;
-      top: -10px;
+      box-shadow: var(--button-hover-box-shadow);
+      top: -5px;
     }
 
     svg {

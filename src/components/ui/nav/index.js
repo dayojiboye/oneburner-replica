@@ -10,21 +10,21 @@ const Nav = ({ isOpen }) => {
     setShowDropdown(!showDropdown);
   };
 
-  const navStyle = ['nav', isOpen ? 'open' : null];
+  const navStyle = ['nav', isOpen ? '_open' : null];
 
-  const dropdownStyle = ['dropdownMenu', showDropdown ? 'show' : null];
+  const dropdownStyle = ['dropdown_menu', showDropdown ? '_show' : null];
 
-  const iconStyle = ['dropdown-icon', showDropdown ? 'flip' : null];
+  const iconStyle = ['_dropdown_icon', showDropdown ? '_flip' : null];
 
   return (
     <nav className={navStyle.join(' ')}>
-      <ul className="nav-start">
-        <li className="hasDropDown">
+      <ul className="nav__start">
+        <li className="_has_dropdown">
           <button onClick={handleShowdDropdown}>
             Product <ChevronDown className={iconStyle.join(' ')} />
           </button>
           <div className={dropdownStyle.join(' ')}>
-            <div className="dropdown-wrap">
+            <div className="dropdown_menu__wrapper">
               <a href="/">Link</a>
               <a href="/">Link</a>
               <a href="/">Link</a>
@@ -43,7 +43,7 @@ const Nav = ({ isOpen }) => {
         </li>
       </ul>
 
-      <ul className="nav-end">
+      <ul className="nav__end">
         <li>
           <a href="/">Contact Sales</a>
         </li>
@@ -51,7 +51,7 @@ const Nav = ({ isOpen }) => {
           <a href="/">Login</a>
         </li>
         <li>
-          <a href="/" className="signup-link">
+          <a href="/" className="_signup_link">
             Try For Free <ChevronRight />
           </a>
         </li>

@@ -5,23 +5,17 @@ import './styles.scss';
 
 const favoriteTools = () => {
   return (
-    <div className="fav-tools">
+    <section className="section_wrapper favorite_tools">
       <h2>Integrate with your favourite tools easily in one click</h2>
 
-      <div className="tools-images-container">
-        <div className="first-layer-icons">
+      <div className="favorite_tools__images_container">
+        <div className="_icons_grid">
           {icons.firstLayer.map((item) => {
             return <Fragment key={item.name}>{item.icon}</Fragment>;
           })}
         </div>
-
-        <div className="second-layer-icons">
-          {icons.secondLayer.map((item) => {
-            return <Fragment key={item.name}>{item.icon}</Fragment>;
-          })}
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

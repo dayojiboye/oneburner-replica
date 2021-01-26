@@ -1,49 +1,48 @@
-.manage-team {
-  width: 80%;
-  margin: 5rem auto;
+.home_mgt_team {
+  padding: 5rem 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  .manage-team-text {
-    flex: 1;
+  &__text {
+    flex: 0 0 40%;
 
     h2 {
-      width: 70%;
+      max-width: 60%;
     }
 
     p {
-      line-height: 1.5;
+      margin: 1.5rem 0;
     }
   }
 
-  .manage-team-video {
-    padding-left: 7rem;
-    width: 100%;
-    max-width: 600px;
+  &__image {
+    width: 55%;
+    max-width: 700px;
+    flex-shrink: 0;
+    margin-left: 2rem;
   }
 }
 
 @media (max-width: 933px) {
-  .manage-team {
-    width: 90%;
+  .home_mgt_team {
     flex-direction: column;
-    align-items: flex-start;
-    margin: 1rem auto;
+    padding: 2rem 1rem;
 
-    .manage-team-text {
-      width: 100%;
+    &__text {
+      width: var(--full);
       text-align: center;
+      margin-bottom: 3rem;
 
       h2 {
-        width: 100%;
+        max-width: var(--full);
       }
     }
 
-    .manage-team-video {
+    &__image {
       width: 600px;
-      max-width: 90%;
-      margin: 1rem auto;
-      padding: 0;
+      max-width: var(--full);
+      margin: 0 auto;
     }
   }
 }

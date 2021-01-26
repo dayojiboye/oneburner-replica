@@ -12,16 +12,16 @@ const header = ({ clicked, isOpen }) => {
   ];
 
   return (
-    <header className="header">
-      <div className="header-wrap">
-        <div className="logo-container">
-          <div className="logo">
+    <header className="header _max_width">
+      <div className="header__wrapper">
+        <div className="header_logo_container">
+          <div className="_logo">
             <a href="/">
               <Logo />
             </a>
           </div>
 
-          <div className="hamburger-btn">
+          <div className="_hamburger_btn">
             <button
               type="button"
               onClick={clicked}

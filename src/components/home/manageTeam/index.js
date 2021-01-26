@@ -6,15 +6,16 @@ import { useInView } from 'react-intersection-observer';
 import LazyImage from '../../ui/lazyImage';
 
 import {
-  parentVariant,
-  textVariant,
-  imageVariant,
-} from '../../../utils/animations/horizontal';
+  useContainerVariant,
+  FADE_IN_UP,
+} from '../../../utils/animations/variants';
 
 import './styles.scss';
 
 const ManageTeam = () => {
   const controls = useAnimation();
+
+  const CONTAINER_VARIANT = useContainerVariant(0.7);
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -28,14 +29,14 @@ const ManageTeam = () => {
   }, [controls, inView]);
 
   return (
-    <motion.div
+    <motion.section
       ref={ref}
-      variants={parentVariant}
+      variants={CONTAINER_VARIANT}
       animate={controls}
       initial="hidden"
-      className="manage-team"
+      className="section_wrapper home_mgt_team"
     >
-      <motion.div variants={textVariant} className="manage-team-text">
+      <motion.div variants={FADE_IN_UP} className="home_mgt_team__text">
         <h2>Manage team activities all in one place</h2>
         <p>
           Keep your team organized and informed with activities that are up to
@@ -43,10 +44,10 @@ const ManageTeam = () => {
         </p>
       </motion.div>
 
-      <motion.div variants={imageVariant} className="manage-team-video">
+      <motion.div variants={FADE_IN_UP} className="home_mgt_team__image">
         <LazyImage src={TeamImage} alt="example" width="400" height="300" />
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 };
 

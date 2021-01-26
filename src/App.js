@@ -10,7 +10,7 @@ import Layout from './layout';
 
 // pages
 
-import Home from './pages/home';
+import { HomePage } from './pages/home';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Layout>
           <Switch>
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={HomePage} />
           </Switch>
         </Layout>
       </AnimatePresence>

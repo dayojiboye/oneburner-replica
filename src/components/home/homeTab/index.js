@@ -4,10 +4,10 @@ import './styles.scss';
 
 const homeTab = () => {
   return (
-    <div className="homeTab">
+    <section className="home_tab">
       <nav>
         <ul>
-          <li className="active-home-tab">
+          <li className="_active_home_tab">
             <a href="/">CRM & Sales</a>
           </li>
           <li>
@@ -27,7 +27,7 @@ const homeTab = () => {
           </li>
         </ul>
       </nav>
-    </div>
+    </section>
   );
 };
 

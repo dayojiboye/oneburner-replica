@@ -4,7 +4,7 @@ import './styles.scss';
 
 const footerLinks = () => {
   return (
-    <div className="footer-links">
+    <div className="footer_links">
       <ul>
         <li>
           <span>PRODUCT</span>

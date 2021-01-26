@@ -5,14 +5,16 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import {
-  introTextVariants,
-  fadeInUp,
-} from '../../../utils/animations/homeIntro';
+  useContainerVariant,
+  FADE_IN_UP,
+} from '../../../utils/animations/variants';
 
 import './styles.scss';
 
 const Outro = () => {
   const controls = useAnimation();
+
+  const CONTAINER_VARIANT = useContainerVariant(0.3);
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -26,23 +28,23 @@ const Outro = () => {
   }, [controls, inView]);
 
   return (
-    <motion.div
+    <motion.section
       ref={ref}
-      variants={introTextVariants}
+      variants={CONTAINER_VARIANT}
       animate={controls}
       initial="hidden"
-      className="home-outro"
+      className="home_outro"
     >
-      <motion.h3 variants={fadeInUp}>Choose a better way to work</motion.h3>
+      <motion.h3 variants={FADE_IN_UP}>Choose a better way to work</motion.h3>
 
-      <motion.p variants={fadeInUp}>
+      <motion.p variants={FADE_IN_UP}>
         No credit card details | No additional installation | No time wasting
       </motion.p>
 
-      <motion.a variants={fadeInUp} href="/" className="home-outro-btn">
-        Start my free trial <ChevronRight />
+      <motion.a variants={FADE_IN_UP} href="/" className="home_outro__btn">
+        Start My Free Trial <ChevronRight />
       </motion.a>
-    </motion.div>
+    </motion.section>
   );
 };
 

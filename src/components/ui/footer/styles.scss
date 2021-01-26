@@ -1,15 +1,18 @@
 .footer {
-  width: 90%;
   padding: 3rem 0 0;
-  margin: 0 auto;
 
-  .footer-divider {
-    border-top: 1px solid #ccc;
-  }
+  &__wrapper {
+    width: 90%;
+    margin: 0 auto;
 
-  .footer-copyright {
-    display: inline-block;
-    margin: 1rem 0;
+    ._footer_divider {
+      border-top: 1px solid var(--fade);
+    }
+
+    ._footer_copyright {
+      display: inline-block;
+      margin: 1rem 0;
+    }
   }
 }
 

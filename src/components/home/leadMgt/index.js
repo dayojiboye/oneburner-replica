@@ -6,15 +6,16 @@ import { useInView } from 'react-intersection-observer';
 import LazyImage from '../../ui/lazyImage';
 
 import {
-  parentVariant,
-  textVariant,
-  imageVariant,
-} from '../../../utils/animations/horizontal';
+  useContainerVariant,
+  FADE_IN_UP,
+} from '../../../utils/animations/variants';
 
 import './styles.scss';
 
 const LeadMgt = () => {
   const controls = useAnimation();
+
+  const CONTAINER_VARIANT = useContainerVariant(0.7);
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -28,14 +29,14 @@ const LeadMgt = () => {
   }, [controls, inView]);
 
   return (
-    <motion.div
+    <motion.section
       ref={ref}
-      variants={parentVariant}
+      variants={CONTAINER_VARIANT}
       animate={controls}
       initial="hidden"
-      className="lead-mgt"
+      className="section_wrapper home_mgt"
     >
-      <motion.div variants={textVariant} className="lead-mgt-text">
+      <motion.div variants={FADE_IN_UP} className="home_mgt__text">
         <h2>Efficient lead management</h2>
         <p>
           Track and manage prospective customers. Manage their notes, emails,
@@ -43,10 +44,10 @@ const LeadMgt = () => {
         </p>
       </motion.div>
 
-      <motion.div variants={imageVariant} className="lead-mgt-image">
+      <motion.div variants={FADE_IN_UP} className="home_mgt__image">
         <LazyImage src={LeadMgtImg} alt="example" width="400" height="300" />
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 };
 

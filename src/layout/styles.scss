@@ -1,10 +1,5 @@
-.layout {
-  width: 100%;
-  position: relative;
-
-  .main {
-    width: 100%;
-    margin-top: 4rem;
-    padding: 1rem 0 0;
-  }
+.main {
+  width: var(--full);
+  margin-top: 4rem;
+  padding: 1rem 0 0;
 }

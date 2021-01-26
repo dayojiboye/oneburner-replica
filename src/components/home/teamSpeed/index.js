@@ -6,15 +6,16 @@ import { useInView } from 'react-intersection-observer';
 import LazyImage from '../../ui/lazyImage';
 
 import {
-  parentVariant,
-  textVariant,
-  imageVariant,
-} from '../../../utils/animations/horizontalReversed';
+  useContainerVariant,
+  FADE_IN_UP,
+} from '../../../utils/animations/variants';
 
 import './styles.scss';
 
 const TeamSpeed = () => {
   const controls = useAnimation();
+
+  const CONTAINER_VARIANT = useContainerVariant(0.7, -1);
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -28,25 +29,25 @@ const TeamSpeed = () => {
   }, [controls, inView]);
 
   return (
-    <motion.div
+    <motion.section
       ref={ref}
-      variants={parentVariant}
+      variants={CONTAINER_VARIANT}
       animate={controls}
       initial="hidden"
-      className="team-speed"
+      className="section_wrapper home_team_speed"
     >
-       <motion.div variants={imageVariant} className="team-speed-image">
+      <motion.div variants={FADE_IN_UP} className="home_team_speed__image">
         <LazyImage src={TeamImage} alt="example" width="400" height="300" />
       </motion.div>
 
-      <motion.div variants={textVariant} className="team-speed-text">
+      <motion.div variants={FADE_IN_UP} className="home_team_speed__text">
         <h2>Bring your team up to speed</h2>
         <p>
           Collaborate on project from start to finish, see information at a
           glance, add comment, attachment and more with Oneburner.
         </p>
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 };
 

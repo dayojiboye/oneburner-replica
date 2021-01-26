@@ -6,15 +6,16 @@ import { useInView } from 'react-intersection-observer';
 import LazyImage from '../../ui/lazyImage';
 
 import {
-  parentVariant,
-  textVariant,
-  imageVariant,
-} from '../../../utils/animations/horizontal';
+  useContainerVariant,
+  FADE_IN_UP,
+} from '../../../utils/animations/variants';
 
 import './styles.scss';
 
 const TaskTimeline = () => {
   const controls = useAnimation();
+
+  const CONTAINER_VARIANT = useContainerVariant(0.7)
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -28,22 +29,27 @@ const TaskTimeline = () => {
   }, [controls, inView]);
 
   return (
-    <motion.div
+    <motion.section
       ref={ref}
-      variants={parentVariant}
+      variants={CONTAINER_VARIANT}
       animate={controls}
       initial="hidden"
-      className="task-timeline"
+      className="section_wrapper home_task"
     >
-      <motion.div variants={textVariant} className="task-timeline-text">
+      <motion.div variants={FADE_IN_UP} className="home_task__text">
         <h2>Automated task timeline</h2>
         <p>View dates, projects, calendar, sprint and more with reliability.</p>
       </motion.div>
 
-      <motion.div variants={imageVariant} className="task-timeline-image">
-        <LazyImage src={TaskTimelineImg} alt="example" width="400" height="300" />
+      <motion.div variants={FADE_IN_UP} className="home_task__image">
+        <LazyImage
+          src={TaskTimelineImg}
+          alt="example"
+          width="400"
+          height="300"
+        />
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 };
 

@@ -68,9 +68,6 @@ export const icons = {
       icon: <GitLogo />,
       name: 'git',
     },
-  ],
-
-  secondLayer: [
     {
       icon: <OutlookLogo />,
       name: 'outlook',

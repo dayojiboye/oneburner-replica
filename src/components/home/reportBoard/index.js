@@ -6,15 +6,16 @@ import { useInView } from 'react-intersection-observer';
 import LazyImage from '../../ui/lazyImage';
 
 import {
-  parentVariant,
-  textVariant,
-  imageVariant,
-} from '../../../utils/animations/horizontalReversed';
+  useContainerVariant,
+  FADE_IN_UP,
+} from '../../../utils/animations/variants';
 
 import './styles.scss';
 
 const ReportBoard = () => {
   const controls = useAnimation();
+
+  const CONTAINER_VARIANT = useContainerVariant(0.7, -1);
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -28,25 +29,30 @@ const ReportBoard = () => {
   }, [controls, inView]);
 
   return (
-    <motion.div
+    <motion.section
       ref={ref}
-      variants={parentVariant}
+      variants={CONTAINER_VARIANT}
       animate={controls}
       initial="hidden"
-      className="report-board"
+      className="section_wrapper home_rpt_board"
     >
-     <motion.div variants={imageVariant} className="report-board-image">
-        <LazyImage src={ReportBoardImg} alt="example" width="400" height="300" />
+      <motion.div variants={FADE_IN_UP} className="home_rpt_board__image">
+        <LazyImage
+          src={ReportBoardImg}
+          alt="example"
+          width="400"
+          height="300"
+        />
       </motion.div>
 
-      <motion.div variants={textVariant} className="report-board-text">
+      <motion.div variants={FADE_IN_UP} className="home_rpt_board__text">
         <h2>Timeless report generator</h2>
         <p>
           You can generate quick report of activities of all that has to do with
           the daily running of your business and teams.
         </p>
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 };
 

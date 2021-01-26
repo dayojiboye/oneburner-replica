@@ -1,46 +1,40 @@
-.intro {
-  width: 80%;
-  margin: 0 auto;
-  padding: 1.5rem 0;
+.home_intro {
+  padding: 2rem 0;
 
-  .intro-hero {
-    width: 100%;
+  &__hero {
+    width: var(--full);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    .intro-text {
-      flex: 1;
+    ._home_intro_text {
+      flex: 0 0 35%;
+
+      h1 {
+        width: 70%;
+      }
 
       p {
-        line-height: 1.5;
         margin: 1.5rem 0;
       }
 
-      .intro-text-btn {
+      ._home_intro_btn {
         display: block;
-        width: 168px;
-        background: #462686;
+        max-width: 200px;
+        background: var(--primary-color);
         padding: 0.8rem 0;
-        border: 1px solid #462686;
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-        text-decoration: none;
+        border: 1px solid var(--primary-color);
+        border-radius: var(--button-border-radius);
         text-align: center;
-        color: white;
-        font-family: inherit;
-        cursor: pointer;
-        outline: none;
+        color: var(--white);
+        font-weight: 600;
         position: relative;
         top: 0;
-        transition: background 0.4s ease-in-out, border 0.4s ease-in-out,
-          top 0.4s linear;
+        transition: all 0.2s linear;
 
         &:hover {
-          background: #2d1857;
-          border: 1px solid #2d1857;
-          top: -10px;
+          box-shadow: var(--button-hover-box-shadow);
+          top: -5px;
         }
 
         svg {
@@ -51,42 +45,43 @@
       }
     }
 
-    .intro-bg {
-      width: 100%;
-      max-width: 700px;
-      padding-left: 3rem;
+    ._home_intro_bg {
+      width: 60%;
+      max-width: 800px;
+      flex-shrink: 0;
+
+      img {
+        object-fit: cover !important;
+      }
     }
   }
 }
 
 @media (max-width: 933px) {
-  .intro {
-    width: 90%;
+  .home_intro {
+    padding: 2rem 1.3rem;
 
-    .intro-hero {
-      flex-direction: column;
-      align-items: start;
+    &__hero {
+      flex-direction: column-reverse;
 
-      .intro-text {
-        order: 2;
-        width: 100%;
+      ._home_intro_text {
+        width: var(--full);
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 3rem;
 
-        .intro-text-btn {
+        h1 {
+          width: var(--full);
+        }
+
+        ._home_intro_btn {
           margin: 0 auto;
         }
       }
 
-      .intro-bg {
+      ._home_intro_bg {
         width: 600px;
-        max-width: 90%;
+        max-width: var(--full);
         margin: 0 auto;
-        padding: 0;
-
-        img {
-          object-fit: cover !important;
-        }
       }
     }
   }

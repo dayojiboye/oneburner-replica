@@ -6,39 +6,47 @@ import { motion } from 'framer-motion';
 import LazyImage from '../../ui/lazyImage';
 
 import {
-  introVariants,
-  introTextVariants,
-  introBgVariants,
-  fadeInUp,
-} from '../../../utils/animations/homeIntro';
+  useParentVariant,
+  useContainerVariant,
+  ZOOM_IN,
+  FADE_IN_UP,
+} from '../../../utils/animations/variants';
 
 import './styles.scss';
 
 const Intro = () => {
+  const PARENT_VARIANT = useParentVariant(1, -1);
+
+  const CONTAINER_VARIANT = useContainerVariant(0.3, 1, 0.5);
+
   return (
-    <div className="intro">
+    <section className="section_wrapper home_intro">
       <motion.div
-        variants={introVariants}
+        variants={PARENT_VARIANT}
         animate="visible"
         initial="hidden"
-        className="intro-hero"
+        className="home_intro__hero"
       >
-        <motion.div variants={introTextVariants} className="intro-text">
-          <motion.h1 variants={fadeInUp}>
+        <motion.div variants={CONTAINER_VARIANT} className="_home_intro_text">
+          <motion.h1 variants={FADE_IN_UP}>
             Collaborate with your team and get more done
           </motion.h1>
 
-          <motion.p variants={fadeInUp}>
+          <motion.p variants={FADE_IN_UP}>
             Communicate effectively with Oneburner for easy collaboration, team
             work and remote work.
           </motion.p>
 
-          <motion.a variants={fadeInUp} href="/" className="intro-text-btn">
+          <motion.a
+            variants={FADE_IN_UP}
+            href="/"
+            className="_home_intro_btn"
+          >
             Start Free Trial <ChevronRight />
           </motion.a>
         </motion.div>
 
-        <motion.div variants={introBgVariants} className="intro-bg">
+        <motion.div variants={ZOOM_IN} className="_home_intro_bg">
           <LazyImage
             src={LandingImage}
             alt="landing"
@@ -47,7 +55,7 @@ const Intro = () => {
           />
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

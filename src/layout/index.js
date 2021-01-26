@@ -10,16 +10,16 @@ const Layout = ({ children }) => {
   const menuBtnHandler = () => {
     setDrawerOpen(!isDrawerOpen);
 
-    document.documentElement.classList.toggle('fixed');
-    document.body.classList.toggle('fixed');
+    document.documentElement.classList.toggle('_fixed');
+    document.body.classList.toggle('_fixed');
   };
 
   return (
-    <div className="layout">
+    <>
       <Header clicked={menuBtnHandler} isOpen={isDrawerOpen} />
       <main className="main">{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 
