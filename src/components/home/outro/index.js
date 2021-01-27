@@ -4,17 +4,12 @@ import { ChevronRight } from '../../../assets/icons';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-import {
-  useContainerVariant,
-  FADE_IN_UP,
-} from '../../../utils/animations/variants';
+import { FADE_IN_UP } from '../../../utils/animations/variants';
 
 import './styles.scss';
 
 const Outro = () => {
   const controls = useAnimation();
-
-  const CONTAINER_VARIANT = useContainerVariant(0.3);
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -30,8 +25,8 @@ const Outro = () => {
   return (
     <motion.section
       ref={ref}
-      variants={CONTAINER_VARIANT}
       animate={controls}
+      transition={{ staggerChildren: 0.3 }}
       initial="hidden"
       className="home_outro"
     >

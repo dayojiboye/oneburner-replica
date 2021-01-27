@@ -5,17 +5,12 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import LazyImage from '../../ui/lazyImage';
 
-import {
-  useContainerVariant,
-  FADE_IN_UP,
-} from '../../../utils/animations/variants';
+import { FADE_IN_UP } from '../../../utils/animations/variants';
 
 import './styles.scss';
 
 const LeadMgt = () => {
   const controls = useAnimation();
-
-  const CONTAINER_VARIANT = useContainerVariant(0.7);
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -31,7 +26,6 @@ const LeadMgt = () => {
   return (
     <motion.section
       ref={ref}
-      variants={CONTAINER_VARIANT}
       animate={controls}
       initial="hidden"
       className="section_wrapper home_mgt"
@@ -44,9 +38,9 @@ const LeadMgt = () => {
         </p>
       </motion.div>
 
-      <motion.div variants={FADE_IN_UP} className="home_mgt__image">
+      <div className="home_mgt__image">
         <LazyImage src={LeadMgtImg} alt="example" width="400" height="300" />
-      </motion.div>
+      </div>
     </motion.section>
   );
 };

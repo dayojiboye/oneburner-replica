@@ -5,21 +5,16 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import LazyImage from '../../ui/lazyImage';
 
-import {
-  useContainerVariant,
-  FADE_IN_UP,
-} from '../../../utils/animations/variants';
+import { FADE_IN_UP } from '../../../utils/animations/variants';
 
 import './styles.scss';
 
 const TeamSpeed = () => {
   const controls = useAnimation();
 
-  const CONTAINER_VARIANT = useContainerVariant(0.7, -1);
-
   const [ref, inView] = useInView({
     threshold: 0,
-    rootMargin: '0px 0px -200px 0px',
+    rootMargin: '0px 0px -150px 0px',
   });
 
   useEffect(() => {
@@ -31,14 +26,13 @@ const TeamSpeed = () => {
   return (
     <motion.section
       ref={ref}
-      variants={CONTAINER_VARIANT}
       animate={controls}
       initial="hidden"
       className="section_wrapper home_team_speed"
     >
-      <motion.div variants={FADE_IN_UP} className="home_team_speed__image">
+      <div className="home_team_speed__image">
         <LazyImage src={TeamImage} alt="example" width="400" height="300" />
-      </motion.div>
+      </div>
 
       <motion.div variants={FADE_IN_UP} className="home_team_speed__text">
         <h2>Bring your team up to speed</h2>

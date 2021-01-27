@@ -1,33 +1,3 @@
-export const useParentVariant = (staggerTime, staggerDirection) => {
-  return {
-    visible: {
-      transition: {
-        staggerChildren: staggerTime,
-        staggerDirection: staggerDirection,
-      },
-    },
-  };
-};
-
-export const useContainerVariant = (
-  staggerTime,
-  staggerDirection,
-  delayChildren
-) => {
-  return {
-    visible: {
-      transition: {
-        duration: 0.6,
-        ease: 'easeInOut',
-        when: 'beforeChildren',
-        staggerChildren: staggerTime,
-        staggerDirection: staggerDirection,
-        delayChildren: delayChildren,
-      },
-    },
-  };
-};
-
 export const ZOOM_IN = {
   hidden: {
     opacity: 0,

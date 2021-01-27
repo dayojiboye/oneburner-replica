@@ -16,7 +16,7 @@ const header = ({ clicked, isOpen }) => {
       <div className="header__wrapper">
         <div className="header_logo_container">
           <div className="_logo">
-            <a href="/">
+            <a href="/" aria-label="OneBurner logo">
               <Logo />
             </a>
           </div>
@@ -24,6 +24,7 @@ const header = ({ clicked, isOpen }) => {
           <div className="_hamburger_btn">
             <button
               type="button"
+              aria-label="navigation button"
               onClick={clicked}
               className={buttonStyle.join(' ')}
             >

@@ -3,22 +3,29 @@ import React from 'react';
 import { ChevronRight } from '../../../assets/icons';
 import LandingImage from '../../../assets/images/landing-image.png';
 import { motion } from 'framer-motion';
-import LazyImage from '../../ui/lazyImage';
 
-import {
-  useParentVariant,
-  useContainerVariant,
-  ZOOM_IN,
-  FADE_IN_UP,
-} from '../../../utils/animations/variants';
+import { FADE_IN_UP, ZOOM_IN } from '../../../utils/animations/variants';
 
 import './styles.scss';
 
+const PARENT_VARIANT = {
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+      staggerDirection: -1,
+    },
+  },
+};
+
+const TEXT_VARIANT = {
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
 const Intro = () => {
-  const PARENT_VARIANT = useParentVariant(1, -1);
-
-  const CONTAINER_VARIANT = useContainerVariant(0.3, 1, 0.5);
-
   return (
     <section className="section_wrapper home_intro">
       <motion.div
@@ -27,7 +34,7 @@ const Intro = () => {
         initial="hidden"
         className="home_intro__hero"
       >
-        <motion.div variants={CONTAINER_VARIANT} className="_home_intro_text">
+        <motion.div variants={TEXT_VARIANT} className="_home_intro_text">
           <motion.h1 variants={FADE_IN_UP}>
             Collaborate with your team and get more done
           </motion.h1>
@@ -37,22 +44,15 @@ const Intro = () => {
             work and remote work.
           </motion.p>
 
-          <motion.a
-            variants={FADE_IN_UP}
-            href="/"
-            className="_home_intro_btn"
-          >
+          <motion.a variants={FADE_IN_UP} href="/" className="_home_intro_btn">
             Start Free Trial <ChevronRight />
           </motion.a>
         </motion.div>
 
         <motion.div variants={ZOOM_IN} className="_home_intro_bg">
-          <LazyImage
-            src={LandingImage}
-            alt="landing"
-            width="400"
-            height="350"
-          />
+          <div className="_image_container">
+            <img src={LandingImage} alt="landing" width="400" height="350" />
+          </div>
         </motion.div>
       </motion.div>
     </section>
