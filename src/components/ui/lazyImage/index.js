@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { useInView } from 'react-intersection-observer';
 
@@ -9,22 +9,24 @@ import { FADE_IN_UP } from '../../../utils/animations/variants';
 const LazyImage = ({ width, height, src, alt, ...props }) => {
   const controls = useAnimation();
 
+  const [loaded, setLoaded] = useState(false);
+
   const [ref, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '0px 0px -100px',
+    rootMargin: '0px 0px -50px',
   });
 
   useEffect(() => {
-    if (inView) {
+    if (loaded) {
       controls.start('visible');
     }
-  }, [controls, inView]);
+  }, [controls, loaded]);
 
   return (
     <motion.div
       ref={ref}
       animate={controls}
-      transition={{ delayChildren: 0.5 }}
+      transition={{ delayChildren: 0.4 }}
       initial="hidden"
       data-inview={inView}
       style={{
@@ -32,7 +34,7 @@ const LazyImage = ({ width, height, src, alt, ...props }) => {
         position: 'relative',
       }}
     >
-      {inView ? (
+      {inView && (
         <motion.img
           variants={FADE_IN_UP}
           src={src}
@@ -40,6 +42,7 @@ const LazyImage = ({ width, height, src, alt, ...props }) => {
           width={width}
           height={height}
           {...props}
+          onLoad={() => setLoaded(true)}
           style={{
             position: 'absolute',
             width: '100%',
@@ -48,7 +51,7 @@ const LazyImage = ({ width, height, src, alt, ...props }) => {
             objectPosition: 'center',
           }}
         />
-      ) : null}
+      )}
     </motion.div>
   );
 };
