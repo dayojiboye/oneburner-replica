@@ -15,7 +15,7 @@ import { HomePage } from './pages/home';
 function App() {
   useEffect(() => {
     window.addEventListener('load', () => {
-      document.body.style.opacity = '';
+      document.body.style.display = '';
     });
   }, []);
 
