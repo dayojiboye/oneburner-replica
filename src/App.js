@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { AnimatePresence } from 'framer-motion';
 
@@ -13,24 +13,14 @@ import Layout from './layout';
 import { HomePage } from './pages/home';
 
 function App() {
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener('load', () => {
-      setLoaded(true);
-    });
-  }, []);
-
   return (
     <>
       <AnimatePresence exitBeforeEnter>
-        {loaded && (
-          <Layout>
-            <Switch>
-              <Route path="/" exact component={HomePage} />
-            </Switch>
-          </Layout>
-        )}
+        <Layout>
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+          </Switch>
+        </Layout>
       </AnimatePresence>
     </>
   );
