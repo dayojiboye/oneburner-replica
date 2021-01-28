@@ -13,7 +13,7 @@ const LazyImage = ({ width, height, src, alt, ...props }) => {
 
   const [ref, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '0px 0px -50px',
+    rootMargin: '0px 0px 10px',
   });
 
   useEffect(() => {
