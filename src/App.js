@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { AnimatePresence } from 'framer-motion';
 
@@ -13,6 +13,12 @@ import Layout from './layout';
 import { HomePage } from './pages/home';
 
 function App() {
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      document.body.style.opacity = '';
+    });
+  }, []);
+
   return (
     <>
       <AnimatePresence exitBeforeEnter>

@@ -1,10 +1,10 @@
 export const ZOOM_IN = {
   hidden: {
-    opacity: 0,
+    // opacity: 0,
     scale: 0,
   },
   visible: {
-    opacity: 1,
+    // opacity: 1, check if this fixes the lighthouse ish
     scale: 1,
     transition: {
       duration: 0.6,
