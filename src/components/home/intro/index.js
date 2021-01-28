@@ -13,6 +13,7 @@ const PARENT_VARIANT = {
     transition: {
       staggerChildren: 0.3,
       staggerDirection: -1,
+      delayChildren: 0.5
     },
   },
 };
