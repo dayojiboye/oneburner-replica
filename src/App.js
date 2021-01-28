@@ -23,15 +23,15 @@ function App() {
 
   return (
     <>
-      {loaded ? (
-        <AnimatePresence exitBeforeEnter>
+      <AnimatePresence exitBeforeEnter>
+        {loaded && (
           <Layout>
             <Switch>
               <Route path="/" exact component={HomePage} />
             </Switch>
           </Layout>
-        </AnimatePresence>
-      ) : null}
+        )}
+      </AnimatePresence>
     </>
   );
 }
