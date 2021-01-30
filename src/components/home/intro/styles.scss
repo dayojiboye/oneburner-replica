@@ -11,7 +11,8 @@
       flex: 0 0 35%;
 
       h1 {
-        width: 70%;
+        max-width: 386.05px;
+        font-size: 2rem;
       }
 
       p {
@@ -27,7 +28,6 @@
         border-radius: var(--button-border-radius);
         text-align: center;
         color: var(--white);
-        font-weight: 600;
         position: relative;
         top: 0;
         transition: all 0.2s linear;
@@ -78,7 +78,7 @@
         margin-top: 3rem;
 
         h1 {
-          width: var(--full);
+          max-width: var(--full);
         }
 
         ._home_intro_btn {

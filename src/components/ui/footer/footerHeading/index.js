@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Logo, WorldIcon, ChevronDownPurple } from '../../../../assets/icons';
+import { Logo, ChevronDownPurple } from '../../../../assets/icons';
 import './styles.scss';
 
 const footerHeading = () => {
@@ -12,9 +12,7 @@ const footerHeading = () => {
 
       <div className="footer_heading__lang">
         <button>
-          <span>
-            <WorldIcon className="_footer_world_icon" /> <span>English</span>
-          </span>
+          <span>English</span>
           <ChevronDownPurple className="_footer_chevron_drop" />
         </button>
       </div>

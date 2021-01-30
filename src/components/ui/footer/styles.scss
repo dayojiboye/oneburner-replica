@@ -2,16 +2,13 @@
   padding: 3rem 0 0;
 
   &__wrapper {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
-
-    ._footer_divider {
-      border-top: 1px solid var(--fade);
-    }
 
     ._footer_copyright {
       display: inline-block;
-      margin: 1rem 0;
+      margin: 1.5rem 0 1rem;
+      color: var(--footer-links-primary);
     }
   }
 }
@@ -19,5 +16,9 @@
 @media (max-width: 933px) {
   .footer {
     padding: 2rem 0 0;
+
+    &__wrapper {
+      width: 90%;
+    }
   }
 }

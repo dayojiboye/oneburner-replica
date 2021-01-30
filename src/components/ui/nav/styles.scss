@@ -1,6 +1,6 @@
 @font-face {
-  font-family: SF Pro Light;
-  src: url('../../../assets/fonts/SF-Pro-Display-Light.otf');
+  font-family: SF Pro Regular;
+  src: url('../../../assets/fonts/SF Pro Display Regular.ttf');
 }
 
 .nav {
@@ -9,7 +9,7 @@
   justify-content: space-between;
   flex: 1;
   margin-left: 1.5rem;
-  font-family: SF Pro Light;
+  font-family: SF Pro Regular;
 
   &__start,
   &__end {
@@ -21,7 +21,7 @@
       width: auto;
       white-space: nowrap;
       cursor: pointer;
-      font-weight: bold;
+      color: var(--nav-text-primary);
 
       &._has_dropdown {
         position: relative;
@@ -31,6 +31,14 @@
           padding: 0.5rem 0;
           border: 0;
           cursor: pointer;
+          display: flex;
+          align-items: center;
+
+          ._dropdown_icon {
+            width: 10px;
+            height: 12px;
+            margin-left: 5px;
+          }
         }
 
         .dropdown_menu {
@@ -67,13 +75,6 @@
         display: block;
         height: var(--full);
       }
-
-      > svg {
-        width: 12px;
-        height: 7px;
-        margin-left: 2px;
-        vertical-align: middle;
-      }
     }
   }
 
@@ -94,7 +95,7 @@
           position: relative;
           top: 0;
           transition: all 0.2s linear;
-          font-weight: 600;
+          font-weight: 500;
 
           &:hover {
             box-shadow: var(--button-hover-box-shadow);
@@ -156,11 +157,11 @@
             width: var(--full);
             text-align: left;
             background: transparent;
-            display: flex;
             justify-content: space-between;
-            align-items: center;
 
             ._dropdown_icon {
+              margin-left: 0;
+
               &._flip {
                 transform: rotate(180deg);
               }

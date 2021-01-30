@@ -1,5 +1,5 @@
 .home_tab {
-  width: 90%;
+  width: 95%;
   margin: 3rem auto;
   border: 1px solid var(--primary-color);
   border-radius: var(--border-radius-mini);
@@ -28,6 +28,8 @@
         height: var(--full);
 
         &._active_home_tab {
+          box-shadow: var(--active-tab-box-shadow);
+
           a {
             color: var(--white);
             background: var(--primary-color);
@@ -44,5 +46,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 933px) {
+  .home_tab {
+    width: 90%;
   }
 }

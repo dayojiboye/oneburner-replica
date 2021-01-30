@@ -18,11 +18,12 @@
         display: inline-block;
         font-size: 0.87rem;
         line-height: 1.6;
+        color: var( --footer-links-heading);
       }
 
       > a {
         display: table;
-        color: var(--primary-color);
+        color: var(--footer-links-primary);
         font-size: 0.87rem;
         margin-bottom: 0.5rem;
       }

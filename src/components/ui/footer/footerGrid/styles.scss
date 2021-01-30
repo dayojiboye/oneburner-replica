@@ -2,31 +2,35 @@
   width: var(--full);
   display: flex;
   justify-content: space-between;
-  margin: 1rem 0 3rem;
+  padding: 2rem 0 3rem;
+  border-bottom: 1px solid var(--fade);
 
   &__extra {
     width: auto;
     white-space: nowrap;
+    color: var(--nav-text-primary);
 
     ._footer_extra_links {
       margin-top: 1rem;
       font-size: 0.87rem;
 
       a {
-        color: var(--primary-color);
+        color: var(--footer-links-primary);
       }
     }
 
     ._footer_contact {
       display: flex;
       flex-direction: column;
-      margin-top: 3rem;
+      margin-top: 5.5rem;
       font-size: 0.87rem;
+      color: var(--footer-links-primary);
 
       ._footer_number {
         margin-top: 0.5rem;
         font-size: initial;
         white-space: nowrap;
+        color: var(--heading-text-primary);
       }
 
       ._footer_social_icons {
@@ -52,7 +56,7 @@
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
+    padding: 1rem 0;
 
     &__extra {
       text-align: center;
@@ -61,6 +65,7 @@
       ._footer_contact {
         align-items: center;
         justify-content: center;
+        margin-top: 3rem;
       }
     }
   }

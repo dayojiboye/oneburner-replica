@@ -10,7 +10,6 @@ const footer = () => {
       <div className="footer__wrapper">
         <FooterHeading />
         <FooterGrid />
-        <hr className="_footer_divider" />
         <span className="_footer_copyright">© 2021 Copyright</span>
       </div>
     </footer>

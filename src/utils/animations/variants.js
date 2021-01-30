@@ -16,7 +16,7 @@ export const ZOOM_IN = {
 export const FADE_IN_UP = {
   hidden: {
     opacity: 0,
-    y: 150,
+    y: 50,
   },
   visible: {
     opacity: 1,

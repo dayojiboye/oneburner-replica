@@ -1,7 +1,11 @@
 :root {
   --primary-color: #462686;
   --primary-color-lighter: #7837f8;
-  --black: black;
+  --nav-text-primary: #454545;
+  --text-primary: rgba(51, 51, 51, 0.8);
+  --heading-text-primary: #333333;
+  --footer-links-primary: rgba(1, 0, 29, 0.6);
+  --footer-links-heading: #455A64;
   --white: white;
   --fade: #ccc;
   --white-smoke: whiteSmoke;
@@ -15,4 +19,5 @@
   --dark-box-shadow-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   --dropdown-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --active-tab-box-shadow: 7px 0px 14px rgba(70, 38, 134, 0.14);
 }

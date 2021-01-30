@@ -26,7 +26,7 @@ const LazyImage = ({ width, height, src, alt, ...props }) => {
     <motion.div
       ref={ref}
       animate={controls}
-      transition={{ delayChildren: 0.4 }}
+      transition={{ delayChildren: 0.7 }}
       initial="hidden"
       data-inview={inView}
       style={{

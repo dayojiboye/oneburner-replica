@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: Sofia Pro Regular;
-  src: url('../assets/fonts/Sofia Pro Light Az.otf');
+  src: url('../assets/fonts/Sofia Pro Regular Az.otf');
 }
 
 html {
@@ -27,6 +27,7 @@ body {
   width: var(--full);
   height: var(--full);
   background: var(--white);
+  color: var(--text-primary);
   overflow-x: hidden;
 }
 
@@ -36,6 +37,12 @@ body._fixed {
   -webkit-overflow-scrolling: none;
   overflow: hidden;
   overscroll-behavior: none;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--heading-text-primary);
 }
 
 h1,
@@ -56,6 +63,7 @@ a {
 button {
   outline: none;
   font: inherit;
+  color: inherit;
 }
 
 ul,
