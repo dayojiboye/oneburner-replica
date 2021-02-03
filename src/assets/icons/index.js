@@ -7,6 +7,10 @@ export { ReactComponent as FacebookIcon } from './facebook-day 1.svg';
 export { ReactComponent as TwitterIcon } from './twitter-day 1.svg';
 export { ReactComponent as LinkedinIcon } from './linkedin-day 1.svg';
 export { ReactComponent as YoutubeIcon } from './youtube-day 1.svg';
+export { ReactComponent as BriefcaseSVG } from './briefcase.svg';
+export { ReactComponent as NotesSVG } from './notes_icon.svg';
+export { ReactComponent as PlugSVG } from './plug.svg';
+export { ReactComponent as StoreSVG } from './stores.svg';
 
 export { ReactComponent as PaystackLogo } from './paystack-logo.svg';
 export { ReactComponent as EgyptairLogo } from './egyptair-logo.svg';

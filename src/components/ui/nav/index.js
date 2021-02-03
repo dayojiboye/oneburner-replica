@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { ChevronDown, ChevronRight } from '../../../assets/icons';
+import ProductDropdown from './product_dropdown';
 import './styles.scss';
 
 const Nav = ({ isOpen }) => {
@@ -24,12 +25,7 @@ const Nav = ({ isOpen }) => {
             Product <ChevronDown className={iconStyle.join(' ')} />
           </button>
           <div className={dropdownStyle.join(' ')}>
-            <div className="dropdown_menu__wrapper">
-              <a href="/">Link</a>
-              <a href="/">Link</a>
-              <a href="/">Link</a>
-              <a href="/">Link</a>
-            </div>
+            <ProductDropdown />
           </div>
         </li>
         <li>

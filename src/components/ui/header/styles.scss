@@ -17,7 +17,7 @@
     height: auto;
 
     .header_logo_container {
-      z-index: 20;
+      z-index: -1;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -51,6 +51,7 @@
 
       .header_logo_container {
         width: var(--full);
+        z-index: 20;
 
         ._logo {
           width: 8rem;

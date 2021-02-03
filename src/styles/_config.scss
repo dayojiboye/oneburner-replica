@@ -56,12 +56,14 @@ p {
 a {
   text-decoration: none;
   outline: none;
+  // outline-offset: -2px;
   font-family: inherit;
   white-space: nowrap;
 }
 
 button {
   outline: none;
+  // outline-offset: -2px;
   font: inherit;
   color: inherit;
 }
