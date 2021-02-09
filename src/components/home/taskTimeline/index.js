@@ -14,7 +14,7 @@ const TaskTimeline = () => {
 
   const [ref, inView] = useInView({
     threshold: 0,
-    rootMargin: '0px 0px -150px 0px',
+    rootMargin: '0px 0px -200px 0px',
   });
 
   useEffect(() => {
@@ -30,7 +30,10 @@ const TaskTimeline = () => {
       initial="hidden"
       className="section_wrapper home_task"
     >
-      <motion.div variants={FADE_IN_UP} className="home_task__text">
+      <motion.div
+        variants={FADE_IN_UP}
+        className="home_task__text text_max_width"
+      >
         <h2>Automated task timeline</h2>
         <p>View dates, projects, calendar, sprint and more with reliability.</p>
       </motion.div>

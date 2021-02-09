@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { ChevronDown, ChevronRight } from '../../../assets/icons';
 import ProductDropdown from './product_dropdown';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const Nav = ({ isOpen }) => {
@@ -32,7 +33,7 @@ const Nav = ({ isOpen }) => {
           <a href="/">Pricing</a>
         </li>
         <li>
-          <a href="/">Enterprise</a>
+          <Link to="/enterprise">Enterprise</Link>
         </li>
         <li>
           <a href="/">Support</a>

@@ -1,24 +1,18 @@
-.home_outro {
+.enterprise_outro {
   width: var(--full);
-  background: var(--primary-color-lighter);
+  background: rgba(204, 204, 204, 0.1);
   padding: 10rem 1rem;
-  text-align: center;
 
   &__content {
     margin: 0 auto;
-    color: var(--white);
+    text-align: center;
 
     h3 {
       font-size: 1.7rem;
-      color: inherit;
+      margin-bottom: 2rem;
     }
 
-    p {
-      margin-bottom: 2.5rem;
-      margin-top: 2rem;
-    }
-
-    &__btn {
+    .enterprise_outro_btn {
       display: block;
       max-width: 230px;
       background: var(--primary-color);
@@ -27,7 +21,7 @@
       border: 1px solid var(--primary-color);
       border-radius: var(--button-border-radius);
       text-align: center;
-      color: inherit;
+      color: var(--white);
       position: relative;
       top: 0;
       transition: all 0.2s linear;

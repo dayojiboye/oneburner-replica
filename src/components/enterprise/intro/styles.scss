@@ -1,0 +1,80 @@
+.enterprise_intro {
+  width: 90%;
+  margin: 1rem auto 0;
+
+  &__hero {
+    width: var(--full);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: url('../../../assets/icons/enterpriseshit.svg') no-repeat 0 0px;
+    background-size: 100% auto;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+
+    .enterprise_hero_content {
+      h1 {
+        font-size: 2.625rem;
+      }
+
+      p {
+        margin: 2rem 0;
+      }
+
+      > a {
+        display: block;
+        max-width: 200px;
+        margin: 0 auto;
+        background: var(--primary-color);
+        padding: 0.8rem 0;
+        border: 1px solid var(--primary-color);
+        border-radius: var(--button-border-radius);
+        text-align: center;
+        color: var(--white);
+        position: relative;
+        top: 0;
+        transition: all 0.2s linear;
+
+        &:hover {
+          box-shadow: var(--button-hover-box-shadow);
+          top: -5px;
+        }
+
+        svg {
+          width: 7px;
+          height: 10px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .enterprise_intro {
+    margin: 0;
+    padding: 3rem 1rem;
+    width: var(--full);
+
+    &__hero {
+      background: initial;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .enterprise_intro {
+    &__hero {
+      .enterprise_hero_content {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+// 1023
+// font 62px

@@ -49,8 +49,17 @@ h1,
 h2,
 h3,
 p {
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
+}
+
+p,
+._main_text_size {
+  font-size: 1rem;
+
+  @media (min-width: 701px) {
+    font-size: 1.25rem;
+  }
 }
 
 a {
@@ -85,9 +94,17 @@ li {
   width: 85%;
   margin: 0 auto;
 
-  @media (max-width: 933px) {
+  @media (max-width: 1023px) {
     width: var(--full);
   }
+}
+
+.text_max_width {
+  max-width: 512px;
+}
+
+.d_inline_block {
+  display: inline-block;
 }
 
 // hamburger

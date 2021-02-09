@@ -1,9 +1,6 @@
 .favorite_tools {
-  padding: 5rem 0 2rem;
-
-  h2 {
-    text-align: center;
-  }
+  padding: 3rem 0;
+  text-align: center;
 
   &__images_container {
     width: var(--full);
@@ -20,18 +17,22 @@
         margin-right: 1.75rem;
         margin-bottom: 2.25rem;
         height: 35px;
-        width: 14.2857%;
+        // width: 14.2857%;
+        width: 35px;
         flex-shrink: 0;
       }
     }
   }
 }
 
-@media (max-width: 933px) {
+@media (max-width: 1023px) {
   .favorite_tools {
-    padding: 2rem 1rem;
+    padding: 3rem 1.5rem;
 
     ._icons_grid {
+      max-width: 750px;
+      margin: 0 auto;
+
       svg {
         margin-right: 1rem !important;
       }

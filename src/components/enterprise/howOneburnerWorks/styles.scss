@@ -1,0 +1,167 @@
+.how_one_burner_works {
+  width: var(--full);
+  position: relative;
+  margin-bottom: 10rem;
+  margin-top: 3rem;
+
+  .how_one_burner_helps {
+    width: var(--full);
+    background: var(--primary-color-lighter);
+    padding: 10rem 2.5rem;
+    text-align: center;
+
+    h2 {
+      color: var(--white);
+      font-size: 1.7rem;
+    }
+
+    &__grid {
+      width: var(--full);
+      display: flex;
+      color: var(--white);
+      margin: 3rem 0 0;
+      justify-content: space-evenly;
+
+      ._grid_briefing {
+        line-height: 1.6;
+        text-align: left;
+        flex: 0 0 50%;
+      }
+
+      ._grid_list_items {
+        text-align: left;
+        flex: 0 0 50%;
+        margin-left: 1.5625rem;
+
+        > ul {
+          width: var(--full);
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+
+            > span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              &::before {
+                content: '';
+                background: url('../../../assets/icons/check-circle-07 1.svg')
+                  no-repeat;
+                background-size: cover;
+                width: 27px;
+                height: 27px;
+                flex-shrink: 0;
+                margin-right: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .one_burner_award {
+    background: var(--white);
+    width: 80%;
+    max-width: 700px;
+    box-shadow: var(--dropdown-box-shadow);
+    border-radius: 10px;
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 14;
+
+    &__grid {
+      width: var(--full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .award_container {
+        flex: 0 0 auto;
+
+        > svg {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      .award_content {
+        flex: 0 0 auto;
+        max-width: 300px;
+        margin-left: 10px;
+
+        span {
+          display: inline-block;
+          color: var(--heading-text-primary);
+          line-height: 1.6;
+          white-space: nowrap;
+
+          &:nth-child(1) {
+            font-weight: bold;
+            font-size: 1.5625rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .how_one_burner_works {
+    margin-bottom: 15rem;
+
+    .how_one_burner_helps {
+      padding: 10rem 1.5rem;
+
+      &__grid {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5rem;
+
+        ._grid_briefing {
+          width: var(--full);
+        }
+
+        ._grid_list_items {
+          margin-left: 0;
+          width: var(--full);
+          margin-top: 5rem;
+        }
+      }
+    }
+
+    .one_burner_award {
+      bottom: -22%;
+      padding: 1rem;
+
+      &__grid {
+        flex-direction: column;
+
+        .award_container {
+          > svg {
+            width: 120px;
+            height: 120px;
+          }
+        }
+
+        .award_content {
+          margin: 1.5rem 0;
+          text-align: center;
+
+          span {
+            white-space: pre-wrap;
+          }
+        }
+      }
+    }
+  }
+}

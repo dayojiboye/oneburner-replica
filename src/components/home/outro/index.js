@@ -23,23 +23,29 @@ const Outro = () => {
   }, [controls, inView]);
 
   return (
-    <motion.section
-      ref={ref}
-      animate={controls}
-      transition={{ staggerChildren: 0.3 }}
-      initial="hidden"
-      className="home_outro"
-    >
-      <motion.h3 variants={FADE_IN_UP}>Choose a better way to work</motion.h3>
+    <section className="home_outro">
+      <motion.div
+        ref={ref}
+        animate={controls}
+        transition={{ staggerChildren: 0.6 }}
+        initial="hidden"
+        className="home_outro__content text_max_width"
+      >
+        <motion.h3 variants={FADE_IN_UP}>Choose a better way to work</motion.h3>
 
-      <motion.p variants={FADE_IN_UP}>
-        No credit card details | No additional installation | No time wasting
-      </motion.p>
+        <motion.p variants={FADE_IN_UP}>
+          No credit card details | No additional installation | No time wasting
+        </motion.p>
 
-      <motion.a variants={FADE_IN_UP} href="/" className="home_outro__btn">
-        Start My Free Trial <ChevronRight />
-      </motion.a>
-    </motion.section>
+        <motion.a
+          variants={FADE_IN_UP}
+          href="/"
+          className="home_outro__content__btn"
+        >
+          Start My Free Trial <ChevronRight />
+        </motion.a>
+      </motion.div>
+    </section>
   );
 };
 

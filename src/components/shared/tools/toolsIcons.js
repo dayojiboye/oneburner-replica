@@ -23,7 +23,7 @@ import {
 } from '../../../assets/icons';
 
 export const icons = {
-  firstLayer: [
+  logos: [
     {
       icon: <SlackLogo />,
       name: 'slack',

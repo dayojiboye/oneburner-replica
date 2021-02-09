@@ -20,15 +20,15 @@
   }
 }
 
-@media (max-width: 933px) {
+@media (max-width: 1023px) {
   .home_mgt {
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
 
     &__text {
       width: var(--full);
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
 
     &__image {

@@ -1,5 +1,5 @@
 .home_intro {
-  padding: 2rem 0;
+  padding: 3rem 0;
 
   &__hero {
     width: var(--full);
@@ -11,8 +11,7 @@
       flex: 0 0 35%;
 
       h1 {
-        max-width: 386.05px;
-        font-size: 2rem;
+        font-size: 2.625rem;
       }
 
       p {
@@ -65,9 +64,9 @@
   }
 }
 
-@media (max-width: 933px) {
+@media (max-width: 1023px) {
   .home_intro {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
 
     &__hero {
       flex-direction: column-reverse;
@@ -75,11 +74,7 @@
       ._home_intro_text {
         width: var(--full);
         text-align: center;
-        margin-top: 3rem;
-
-        h1 {
-          max-width: var(--full);
-        }
+        margin-top: 5rem;
 
         ._home_intro_btn {
           margin: 0 auto;
@@ -91,6 +86,14 @@
         max-width: var(--full);
         margin: 0 auto;
       }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .home_intro {
+    h1 {
+      font-size: 2rem !important;
     }
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 
 import Nav from '../nav';
 import { Logo } from '../../../assets/icons';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const header = ({ clicked, isOpen }) => {
@@ -16,9 +17,9 @@ const header = ({ clicked, isOpen }) => {
       <div className="header__wrapper">
         <div className="header_logo_container">
           <div className="_logo">
-            <a href="/" aria-label="OneBurner logo">
+            <Link to="/" aria-label="OneBurner logo">
               <Logo />
-            </a>
+            </Link>
           </div>
 
           <div className="_hamburger_btn">

@@ -11,7 +11,7 @@ import './styles.scss';
 const PARENT_VARIANT = {
   visible: {
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.5,
       staggerDirection: -1,
       delayChildren: 0.7,
     },
@@ -21,7 +21,7 @@ const PARENT_VARIANT = {
 const TEXT_VARIANT = {
   visible: {
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.6,
     },
   },
 };
@@ -49,7 +49,10 @@ const Intro = () => {
         initial="hidden"
         className="home_intro__hero"
       >
-        <motion.div variants={TEXT_VARIANT} className="_home_intro_text">
+        <motion.div
+          variants={TEXT_VARIANT}
+          className="_home_intro_text text_max_width"
+        >
           <motion.h1 variants={FADE_IN_UP}>
             Collaborate with your team and get more done
           </motion.h1>

@@ -11,6 +11,7 @@ import Layout from './layout';
 // pages
 
 import { HomePage } from './pages/home';
+import { EnterprisePage } from './pages/enterprise';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Layout>
           <Switch>
             <Route path="/" exact component={HomePage} />
+            <Route path="/enterprise" component={EnterprisePage} />
           </Switch>
         </Layout>
       </AnimatePresence>

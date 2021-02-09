@@ -14,10 +14,12 @@ import './styles.scss';
 
 const clients = () => {
   return (
-    <section className="section_wrapper home_clients">
-      <p>Over 500+ companies bond teams together with Oneburner</p>
+    <section className="section_wrapper clients">
+      <p className="d_inline_block">
+        Over 500+ companies bond teams together with Oneburner
+      </p>
 
-      <div className="home_clients__companies">
+      <div className="clients__companies">
         <PaystackLogo style={{ height: '50px' }} />
         <EgyptairLogo style={{ height: '45px' }} />
         <DangoteLogo style={{ height: '90px' }} />

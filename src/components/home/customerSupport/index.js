@@ -14,7 +14,7 @@ const CustomerSupport = () => {
 
   const [ref, inView] = useInView({
     threshold: 0,
-    rootMargin: '0px 0px -150px 0px',
+    rootMargin: '0px 0px -200px 0px',
   });
 
   useEffect(() => {
@@ -39,7 +39,10 @@ const CustomerSupport = () => {
         />
       </div>
 
-      <motion.div variants={FADE_IN_UP} className="customer_support__text">
+      <motion.div
+        variants={FADE_IN_UP}
+        className="customer_support__text text_max_width"
+      >
         <h2>24/7 customer support</h2>
         <p>
           Our team of responsible members is always available to help you all

@@ -14,7 +14,7 @@ const LeadMgt = () => {
 
   const [ref, inView] = useInView({
     threshold: 0,
-    rootMargin: '0px 0px -150px 0px',
+    rootMargin: '0px 0px -200px 0px',
   });
 
   useEffect(() => {
@@ -30,7 +30,10 @@ const LeadMgt = () => {
       initial="hidden"
       className="section_wrapper home_mgt"
     >
-      <motion.div variants={FADE_IN_UP} className="home_mgt__text">
+      <motion.div
+        variants={FADE_IN_UP}
+        className="home_mgt__text text_max_width"
+      >
         <h2>Efficient lead management</h2>
         <p>
           Track and manage prospective customers. Manage their notes, emails,

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const footerLinks = () => {
@@ -10,7 +11,7 @@ const footerLinks = () => {
           <span>PRODUCT</span>
 
           <a href="/">Features</a>
-          <a href="/">Enterprise</a>
+          <Link to="/enterprise">Enterprise</Link>
           <a href="/">Security</a>
           <a href="/">Trust</a>
           <a href="/">Customer Stories</a>

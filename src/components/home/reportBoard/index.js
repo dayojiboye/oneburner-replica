@@ -14,7 +14,7 @@ const ReportBoard = () => {
 
   const [ref, inView] = useInView({
     threshold: 0,
-    rootMargin: '0px 0px -150px 0px',
+    rootMargin: '0px 0px -200px 0px',
   });
 
   useEffect(() => {
@@ -39,7 +39,10 @@ const ReportBoard = () => {
         />
       </div>
 
-      <motion.div variants={FADE_IN_UP} className="home_rpt_board__text">
+      <motion.div
+        variants={FADE_IN_UP}
+        className="home_rpt_board__text text_max_width"
+      >
         <h2>Timeless report generator</h2>
         <p>
           You can generate quick report of activities of all that has to do with

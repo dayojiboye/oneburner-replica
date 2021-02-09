@@ -14,7 +14,7 @@ const TeamSpeed = () => {
 
   const [ref, inView] = useInView({
     threshold: 0,
-    rootMargin: '0px 0px -150px 0px',
+    rootMargin: '0px 0px -200px 0px',
   });
 
   useEffect(() => {
@@ -34,7 +34,10 @@ const TeamSpeed = () => {
         <LazyImage src={TeamImage} alt="example" width="400" height="300" />
       </div>
 
-      <motion.div variants={FADE_IN_UP} className="home_team_speed__text">
+      <motion.div
+        variants={FADE_IN_UP}
+        className="home_team_speed__text text_max_width"
+      >
         <h2>Bring your team up to speed</h2>
         <p>
           Collaborate on project from start to finish, see information at a

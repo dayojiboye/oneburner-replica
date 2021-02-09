@@ -1,5 +1,5 @@
-.home_clients {
-  padding: 3rem 0;
+.clients {
+  padding: 5rem 0;
   text-align: center;
 
   &__companies {
@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 5rem;
 
     > svg {
       margin-right: 3.75rem;
@@ -18,9 +18,9 @@
   }
 }
 
-@media (max-width: 933px) {
-  .home_clients {
-    padding: 3rem 1rem;
+@media (max-width: 1023px) {
+  .clients {
+    padding: 5rem 1rem;
 
     &__companies {
       > svg {

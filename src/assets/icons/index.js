@@ -11,6 +11,7 @@ export { ReactComponent as BriefcaseSVG } from './briefcase.svg';
 export { ReactComponent as NotesSVG } from './notes_icon.svg';
 export { ReactComponent as PlugSVG } from './plug.svg';
 export { ReactComponent as StoreSVG } from './stores.svg';
+export { ReactComponent as AwardRibbon } from './award_ribbon.svg';
 
 export { ReactComponent as PaystackLogo } from './paystack-logo.svg';
 export { ReactComponent as EgyptairLogo } from './egyptair-logo.svg';
