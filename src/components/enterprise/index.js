@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-
-import { useLocation } from 'react-router-dom';
+import React from 'react';
 
 import Intro from './intro';
 import Clients from '../shared/clients';
@@ -10,13 +8,7 @@ import RegionalMap from './regionalMap';
 import Reviews from './enterpriseReviews';
 import Outro from './outro';
 
-const Enterprise = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
+const enterprise = () => {
   return (
     <div className="_max_width">
       <Intro />
@@ -30,4 +22,4 @@ const Enterprise = () => {
   );
 };
 
-export default Enterprise;
+export default enterprise;

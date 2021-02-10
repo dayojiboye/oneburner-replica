@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-
-import { useLocation } from 'react-router-dom';
+import React from 'react';
 
 import Intro from './intro';
 import Clients from '../shared/clients';
@@ -14,13 +12,7 @@ import LeadMgt from './leadMgt';
 import CustomerSupport from './customerSupport';
 import Outro from './outro';
 
-const Home = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
+const home = () => {
   return (
     <div className="_max_width">
       <Intro />
@@ -38,4 +30,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default home;
