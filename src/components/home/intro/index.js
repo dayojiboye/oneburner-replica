@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { ChevronRight } from '../../../assets/icons';
 import LandingImage from '../../../assets/images/landing-image.png';
 import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 import { FADE_IN_UP } from '../../../utils/animations/variants';
 
@@ -18,23 +17,20 @@ const TEXT_VARIANT = {
 };
 
 const Intro = () => {
+  const [loaded, setLoaded] = useState(false);
+
   const controls = useAnimation();
 
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-  });
-
   useEffect(() => {
-    if (inView) {
+    if (loaded) {
       controls.start('visible');
     }
-  }, [controls, inView]);
+  }, [controls, loaded]);
 
   return (
     <section className="section_wrapper home_intro">
       <div className="home_intro__hero">
         <motion.div
-          ref={ref}
           variants={TEXT_VARIANT}
           animate={controls}
           initial="hidden"
@@ -56,7 +52,13 @@ const Intro = () => {
 
         <div className="_home_intro_bg">
           <div className="_image_container">
-            <img src={LandingImage} alt="landing" width="400" height="350" />
+            <img
+              src={LandingImage}
+              alt="landing"
+              width="400"
+              height="350"
+              onLoad={() => setLoaded(true)}
+            />
           </div>
         </div>
       </div>
