@@ -12,8 +12,7 @@ const Outro = () => {
   const controls = useAnimation();
 
   const [ref, inView] = useInView({
-    threshold: 0,
-    rootMargin: '0px 0px -150px 0px',
+    threshold: 0.5,
   });
 
   useEffect(() => {
@@ -27,7 +26,7 @@ const Outro = () => {
       <motion.div
         ref={ref}
         animate={controls}
-        transition={{ staggerChildren: 0.6 }}
+        transition={{ staggerChildren: 0.2 }}
         initial="hidden"
         className="home_outro__content text_max_width"
       >

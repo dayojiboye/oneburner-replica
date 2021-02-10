@@ -1,56 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import { ChevronRight } from '../../../assets/icons';
 import LandingImage from '../../../assets/images/landing-image.png';
 import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-import { FADE_IN_UP, ZOOM_IN } from '../../../utils/animations/variants';
+import { FADE_IN_UP } from '../../../utils/animations/variants';
 
 import './styles.scss';
-
-const PARENT_VARIANT = {
-  visible: {
-    transition: {
-      staggerChildren: 0.5,
-      staggerDirection: -1,
-      delayChildren: 0.7,
-    },
-  },
-};
 
 const TEXT_VARIANT = {
   visible: {
     transition: {
-      staggerChildren: 0.6,
+      staggerChildren: 0.2,
     },
   },
 };
 
 const Intro = () => {
-  const [loaded, setLoaded] = useState(false);
-
   const controls = useAnimation();
 
-  const imgLoad = () => {
-    setLoaded(true);
-  };
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+  });
 
   useEffect(() => {
-    if (loaded) {
+    if (inView) {
       controls.start('visible');
     }
-  }, [controls, loaded]);
+  }, [controls, inView]);
 
   return (
     <section className="section_wrapper home_intro">
-      <motion.div
-        variants={PARENT_VARIANT}
-        animate={controls}
-        initial="hidden"
-        className="home_intro__hero"
-      >
+      <div className="home_intro__hero">
         <motion.div
+          ref={ref}
           variants={TEXT_VARIANT}
+          animate={controls}
+          initial="hidden"
           className="_home_intro_text text_max_width"
         >
           <motion.h1 variants={FADE_IN_UP}>
@@ -69,17 +56,10 @@ const Intro = () => {
 
         <div className="_home_intro_bg">
           <div className="_image_container">
-            <motion.img
-              onLoad={imgLoad}
-              variants={ZOOM_IN}
-              src={LandingImage}
-              alt="landing"
-              width="400"
-              height="350"
-            />
+            <img src={LandingImage} alt="landing" width="400" height="350" />
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

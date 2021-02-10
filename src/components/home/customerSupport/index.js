@@ -13,8 +13,7 @@ const CustomerSupport = () => {
   const controls = useAnimation();
 
   const [ref, inView] = useInView({
-    threshold: 0,
-    rootMargin: '0px 0px -200px 0px',
+    threshold: 0.2,
   });
 
   useEffect(() => {
@@ -36,6 +35,7 @@ const CustomerSupport = () => {
           alt="example"
           width="400"
           height="300"
+          toAnimate
         />
       </div>
 

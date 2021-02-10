@@ -6,14 +6,14 @@ import { motion, useAnimation } from 'framer-motion';
 
 import { FADE_IN_UP } from '../../../utils/animations/variants';
 
-const LazyImage = ({ width, height, src, alt, ...props }) => {
+const LazyImage = ({ width, height, src, alt, toAnimate, ...props }) => {
   const controls = useAnimation();
 
   const [loaded, setLoaded] = useState(false);
 
   const [ref, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '0px 0px 10px',
+    threshold: 0.2,
   });
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const LazyImage = ({ width, height, src, alt, ...props }) => {
     >
       {inView && (
         <motion.img
-          variants={FADE_IN_UP}
+          variants={toAnimate ? FADE_IN_UP : null}
           src={src}
           alt={alt}
           width={width}

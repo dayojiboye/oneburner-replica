@@ -13,8 +13,7 @@ const TeamSpeed = () => {
   const controls = useAnimation();
 
   const [ref, inView] = useInView({
-    threshold: 0,
-    rootMargin: '0px 0px -200px 0px',
+    threshold: 0.2,
   });
 
   useEffect(() => {
@@ -31,7 +30,13 @@ const TeamSpeed = () => {
       className="section_wrapper home_team_speed"
     >
       <div className="home_team_speed__image">
-        <LazyImage src={TeamImage} alt="example" width="400" height="300" />
+        <LazyImage
+          src={TeamImage}
+          alt="example"
+          width="400"
+          height="300"
+          toAnimate
+        />
       </div>
 
       <motion.div
