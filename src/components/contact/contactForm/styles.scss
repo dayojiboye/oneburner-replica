@@ -1,0 +1,175 @@
+.contact_form {
+  width: var(--full);
+
+  .group_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    ._contact_form_group {
+      width: var(--full);
+      display: block;
+      flex-shrink: 0;
+
+      &.w_48 {
+        width: 48.5%;
+      }
+
+      &.w_52 {
+        width: 52%;
+      }
+
+      &.w_45 {
+        width: 45%;
+      }
+
+      .input_wrapper {
+        width: var(--full);
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &__prepend {
+          cursor: pointer;
+          padding: 12px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          // border-right: 1px solid var(--fade);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 90px;
+          flex-shrink: 0;
+          height: var(--full);
+
+          &::after {
+            content: '';
+            height: 8px;
+            width: 10px;
+            background: url('../../../assets/icons/chevron-down.svg') no-repeat
+              center;
+            background-size: cover;
+            flex-shrink: 0;
+          }
+
+          svg {
+            height: 18px;
+            //   width: 40px;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+          }
+        }
+
+        > input {
+          padding-left: 100px;
+        }
+      }
+
+      .select_wrapper {
+        width: var(--full);
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::after {
+          content: '';
+          height: 8px;
+          width: 10px;
+          background: url('../../../assets/icons/chevron-down.svg') no-repeat
+            center;
+          background-size: cover;
+          display: block;
+          position: absolute;
+          right: 13px;
+          pointer-events: none;
+          flex-shrink: 0;
+        }
+
+        select {
+          color: rgb(187, 185, 185);
+
+          option {
+            color: var(--text-primary);
+
+            &:first-child {
+              color: var(--fade);
+            }
+          }
+        }
+      }
+
+      input {
+        background: var(--white);
+        padding: 10px;
+      }
+
+      select {
+        background: var(--white);
+        padding: 12px;
+      }
+
+      textarea {
+        background: var(--white);
+        padding: 10px;
+        height: 100px;
+      }
+
+      > button {
+        width: var(--full);
+        background: var(--primary-color);
+        padding: 0.8rem 0;
+        border: 1px solid var(--primary-color);
+        border-radius: var(--button-border-radius);
+        text-align: center;
+        color: var(--white);
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        transition: all 0.2s linear;
+
+        &:hover {
+          box-shadow: var(--button-hover-box-shadow);
+          top: -5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 499px) {
+  .contact_form {
+    .group_flex {
+      flex-direction: column;
+
+      ._contact_form_group {
+        &.w_48,
+        &.w_52,
+        &.w_45 {
+          width: var(--full);
+          margin-bottom: 1.5rem;
+
+          &:nth-child(2) {
+            margin-bottom: 0;
+          }
+        }
+
+        .input_wrapper {
+          &__prepend {
+            width: 80px;
+            padding: 10px;
+          }
+
+          > input {
+            padding-left: 90px;
+          }
+        }
+      }
+    }
+  }
+}

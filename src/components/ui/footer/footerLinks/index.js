@@ -24,7 +24,7 @@ const footerLinks = () => {
           <span>COMPANY</span>
 
           <a href="/">About Us</a>
-          <a href="/">Contact Us</a>
+          <Link to="/contact">Contact Us</Link>
           <a href="/">Careers</a>
           <a href="/">In the News</a>
         </li>

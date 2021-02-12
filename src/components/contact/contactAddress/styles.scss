@@ -1,0 +1,61 @@
+.contact_address {
+  width: var(--full);
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    width: var(--full);
+    margin-bottom: 2rem;
+
+    h2 {
+      font-weight: normal;
+      font-size: 1.7rem;
+    }
+  }
+
+  &__countries {
+    width: var(--full);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    .contact_country_wrapper {
+      line-height: 1.6;
+      color: var(--footer-links-primary);
+
+      > span {
+        display: block;
+
+        &._contact_country {
+          color: var(--footer-links-heading);
+          margin-bottom: 1rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1331px) {
+  .contact_address {
+    &__header {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 566px) {
+  .contact_address {
+    &__countries {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 371px) {
+  .contact_address {
+    &__countries {
+      grid-template-columns: 1fr;
+    }
+  }
+}

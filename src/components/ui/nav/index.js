@@ -42,7 +42,7 @@ const Nav = ({ isOpen }) => {
 
       <ul className="nav__end">
         <li>
-          <a href="/">Contact Sales</a>
+          <Link to="/contact">Contact Sales</Link>
         </li>
         <li>
           <a href="/">Login</a>

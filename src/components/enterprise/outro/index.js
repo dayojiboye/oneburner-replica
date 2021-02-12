@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { ChevronRight } from '../../../assets/icons';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 
 import { FADE_IN_UP } from '../../../utils/animations/variants';
 
@@ -42,13 +43,11 @@ const Outro = () => {
           Want to learn more on how we can impact your enterprise?
         </motion.h3>
 
-        <motion.a
-          variants={FADE_IN_UP}
-          href="/"
-          className="enterprise_outro_btn"
-        >
-          Contact Sales <ChevronRight />
-        </motion.a>
+        <Link to="/contact">
+          <motion.button variants={FADE_IN_UP} className="enterprise_outro_btn">
+            Contact Sales <ChevronRight />
+          </motion.button>
+        </Link>
       </motion.div>
     </section>
   );

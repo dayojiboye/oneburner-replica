@@ -77,6 +77,46 @@ button {
   color: inherit;
 }
 
+label {
+  color: var(--heading-text-primary);
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+input,
+select,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  width: var(--full);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  outline: none;
+  color: inherit;
+  border: 1.5px solid var(--heading-text-primary);
+  border-radius: var(--border-radius-mini);
+  outline-offset: -2px;
+
+  &:focus {
+    border: 1.5px solid var(--primary-color-lighter);
+    box-shadow: 0 0 0 5px rgb(204, 184, 241);
+  }
+
+  &:focus:invalid {
+    border: 1.5px solid #f44336;
+    box-shadow: 0 0 0 5px #f443364d;
+  }
+}
+
+select {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
 ul,
 li {
   list-style-type: none;

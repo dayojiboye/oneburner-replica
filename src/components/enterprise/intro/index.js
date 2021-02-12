@@ -31,7 +31,7 @@ const Intro = () => {
   }, [controls, inView]);
 
   return (
-    <section className="enterprise_intro">
+    <section className="section_wrapper enterprise_intro">
       <motion.div
         ref={ref}
         animate={controls}
