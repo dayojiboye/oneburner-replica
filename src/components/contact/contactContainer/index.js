@@ -14,7 +14,7 @@ const container = () => {
         </div>
 
         <div className="contact_header">
-          <h2>Request a call from an expert</h2>
+          <h1>Request a call from an expert</h1>
 
           <p>
             Having thoughts on which product works best for you? Fill the form

@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { Logo, ChevronDownPurple } from '../../../../assets/icons';
+import { ChevronDownPurple } from '../../../../assets/icons';
+import Logo from '../../../../assets/icons/logo.svg';
 import './styles.scss';
 
 const footerHeading = () => {
   return (
     <div className="footer_heading">
       <div className="footer_heading__logo">
-        <Logo />
+        <img src={Logo} alt="oneburner logo" />
       </div>
 
       <div className="footer_heading__lang">

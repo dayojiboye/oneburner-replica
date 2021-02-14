@@ -6,6 +6,10 @@
 
   &__logo {
     width: 8rem;
+
+    > img {
+      display: block;
+    }
   }
 
   &__lang {

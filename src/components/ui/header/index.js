@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Nav from '../nav';
-import { Logo } from '../../../assets/icons';
+import Logo from '../../../assets/icons/logo.svg';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
@@ -18,7 +18,7 @@ const header = ({ clicked, isOpen }) => {
         <div className="header_logo_container">
           <div className="_logo">
             <Link to="/" aria-label="OneBurner logo">
-              <Logo />
+              <img src={Logo} alt="oneburner logo" />
             </Link>
           </div>
 

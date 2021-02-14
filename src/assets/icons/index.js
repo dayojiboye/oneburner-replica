@@ -1,4 +1,3 @@
-export { ReactComponent as Logo } from './logo.svg';
 export { ReactComponent as ChevronDown } from './chevron-down.svg';
 export { ReactComponent as ChevronRight } from './chevron-right.svg';
 export { ReactComponent as WorldIcon } from './world-icon.svg';
@@ -13,6 +12,8 @@ export { ReactComponent as PlugSVG } from './plug.svg';
 export { ReactComponent as StoreSVG } from './stores.svg';
 export { ReactComponent as AwardRibbon } from './award_ribbon.svg';
 export { ReactComponent as NigeriaSvg } from './Nigeria.svg';
+export { ReactComponent as ClosedEye } from './visibility-slash.svg';
+export { ReactComponent as OpenedEye } from './visibility.svg';
 
 export { ReactComponent as PaystackLogo } from './paystack-logo.svg';
 export { ReactComponent as EgyptairLogo } from './egyptair-logo.svg';
@@ -43,3 +44,4 @@ export { ReactComponent as ExcelLogo } from './excel-logo.svg';
 export { ReactComponent as PowerpointLogo } from './microsoft-powerpoint-logo.svg';
 export { ReactComponent as AccessLogo } from './microsoft-access-logo.svg';
 export { ReactComponent as WordpressLogo } from './wordpress-logo.svg';
+export {ReactComponent as GoogleIcon} from './google-icon 1.svg';

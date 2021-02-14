@@ -65,14 +65,12 @@ p,
 a {
   text-decoration: none;
   outline: none;
-  // outline-offset: -2px;
   font-family: inherit;
   white-space: nowrap;
 }
 
 button {
   outline: none;
-  // outline-offset: -2px;
   font: inherit;
   color: inherit;
 }
@@ -145,6 +143,14 @@ li {
 
 .d_inline_block {
   display: inline-block;
+}
+
+.ml_auto {
+  margin-left: auto;
+
+  @media (max-width: 1023px) {
+    margin-left: 0;
+  }
 }
 
 // hamburger

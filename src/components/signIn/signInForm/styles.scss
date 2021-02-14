@@ -1,0 +1,62 @@
+.signin_form {
+  width: var(--full);
+  max-width: 400px;
+  margin: 5rem auto 0;
+
+  &__group {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .input_wrapper {
+      width: var(--full);
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      ._pass_eye {
+        display: inline-flex;
+        position: absolute;
+        right: 13px;
+        flex-shrink: 0;
+        cursor: pointer;
+
+        > svg {
+          height: 18px;
+          width: 18px;
+        }
+      }
+    }
+
+    input {
+      background: var(--white);
+      padding: 10px;
+    }
+
+    > button {
+      width: var(--full);
+      background: var(--primary-color);
+      padding: 0.8rem 0;
+      border: 1px solid var(--primary-color);
+      border-radius: var(--button-border-radius);
+      text-align: center;
+      color: var(--white);
+      cursor: pointer;
+      position: relative;
+      top: 0;
+      transition: all 0.2s linear;
+
+      &:hover {
+        box-shadow: var(--button-hover-box-shadow);
+        top: -5px;
+      }
+    }
+
+    ._forgot_pass_link {
+      color: var(--primary-color);
+    }
+  }
+}

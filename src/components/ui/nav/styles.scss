@@ -181,7 +181,7 @@
 
       > li {
         margin-bottom: 1.5rem;
-        margin-right: 0;
+        margin-right: 0 !important;
         width: var(--full);
 
         &._has_dropdown {
